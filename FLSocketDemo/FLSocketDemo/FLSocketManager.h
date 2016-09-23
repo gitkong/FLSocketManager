@@ -62,7 +62,7 @@ typedef void(^FLSocketDidReceiveBlock)(id message ,FLSocketReceiveType type);
  *
  *  当前的socket状态
  */
-@property (nonatomic,assign,readonly)FLSocketStatus socketStatus;
+@property (nonatomic,assign,readonly)FLSocketStatus fl_socketStatus;
 /**
  *  @author 孔凡列, 16-09-21 08:09:40
  *

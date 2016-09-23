@@ -13,7 +13,7 @@
 @interface FLSocketManager ()<SRWebSocketDelegate>
 @property (nonatomic,strong)SRWebSocket *webSocket;
 
-@property (nonatomic,assign)FLSocketStatus socketStatus;
+@property (nonatomic,assign)FLSocketStatus fl_socketStatus;
 
 @property (nonatomic,copy)FLSocketDidConnectBlock connect;
 
@@ -56,7 +56,7 @@
 
 // Send a UTF8 String or Data.
 - (void)fl_send:(id)data{
-    switch ([FLSocketManager shareManager].socketStatus) {
+    switch ([FLSocketManager shareManager].fl_socketStatus) {
         case FLSocketStatusConnected:
         case FLSocketStatusReceived:{
             NSLog(@"发送中。。。");
@@ -97,7 +97,7 @@
 }
 
 - (void)fl_reconnect{
-    if(self.socketStatus == FLSocketStatusFailed || self.socketStatus == FLSocketStatusClosedByServer){
+    if(self.fl_socketStatus == FLSocketStatusFailed || self.fl_socketStatus == FLSocketStatusClosedByServer){
         [self.timer invalidate];
         self.timer = nil;
         NSLog(@"正在重连");
@@ -115,12 +115,12 @@
         self.timer = timer;
     }
     [FLSocketManager shareManager].connect ? [FLSocketManager shareManager].connect() : nil;
-    [FLSocketManager shareManager].socketStatus = FLSocketStatusConnected;
+    [FLSocketManager shareManager].fl_socketStatus = FLSocketStatusConnected;
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error{
     NSLog(@":( Websocket Failed With Error %@", error);
-    [FLSocketManager shareManager].socketStatus = FLSocketStatusFailed;
+    [FLSocketManager shareManager].fl_socketStatus = FLSocketStatusFailed;
     [FLSocketManager shareManager].failure ? [FLSocketManager shareManager].failure(error) : nil;
     // 重连
     [self fl_reconnect];
@@ -128,17 +128,17 @@
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message{
     NSLog(@":( Websocket Receive With message %@", message);
-    [FLSocketManager shareManager].socketStatus = FLSocketStatusReceived;
+    [FLSocketManager shareManager].fl_socketStatus = FLSocketStatusReceived;
     [FLSocketManager shareManager].receive ? [FLSocketManager shareManager].receive(message,FLSocketReceiveTypeForMessage) : nil;
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean{
     NSLog(@"Closed Reason:%@  code = %zd",reason,code);
     if (reason) {
-        [FLSocketManager shareManager].socketStatus = FLSocketStatusClosedByServer;
+        [FLSocketManager shareManager].fl_socketStatus = FLSocketStatusClosedByServer;
     }
     else{
-        [FLSocketManager shareManager].socketStatus = FLSocketStatusClosedByUser;
+        [FLSocketManager shareManager].fl_socketStatus = FLSocketStatusClosedByUser;
     }
     [FLSocketManager shareManager].close ? [FLSocketManager shareManager].close(code,reason,wasClean) : nil;
     self.webSocket = nil;
