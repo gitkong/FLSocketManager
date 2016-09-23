@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11FFA9A01D95D31E00B89E70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FFA99F1D95D31E00B89E70 /* main.m */; };
+		11FFA9A31D95D31E00B89E70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FFA9A21D95D31E00B89E70 /* AppDelegate.m */; };
+		11FFA9A61D95D31E00B89E70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FFA9A51D95D31E00B89E70 /* ViewController.m */; };
+		11FFA9A91D95D31E00B89E70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FFA9A71D95D31E00B89E70 /* Main.storyboard */; };
+		11FFA9AB1D95D31E00B89E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FFA9AA1D95D31E00B89E70 /* Assets.xcassets */; };
+		11FFA9AE1D95D31E00B89E70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FFA9AC1D95D31E00B89E70 /* LaunchScreen.storyboard */; };
+		11FFA9B91D95D31F00B89E70 /* FLSocketDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FFA9B81D95D31F00B89E70 /* FLSocketDemoTests.m */; };
+		11FFA9C41D95D31F00B89E70 /* FLSocketDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FFA9C31D95D31F00B89E70 /* FLSocketDemoUITests.m */; };
+		11FFA9D31D95D33600B89E70 /* FLSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FFA9D21D95D33600B89E70 /* FLSocketManager.m */; };
+		69BEC1970BB22257B7369E56 /* libPods-FLSocketDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9468C124D8339895E8EF0043 /* libPods-FLSocketDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11FFA9B51D95D31F00B89E70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11FFA9931D95D31E00B89E70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11FFA99A1D95D31E00B89E70;
+			remoteInfo = FLSocketDemo;
+		};
+		11FFA9C01D95D31F00B89E70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11FFA9931D95D31E00B89E70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11FFA99A1D95D31E00B89E70;
+			remoteInfo = FLSocketDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11FFA99B1D95D31E00B89E70 /* FLSocketDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLSocketDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11FFA99F1D95D31E00B89E70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		11FFA9A11D95D31E00B89E70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		11FFA9A21D95D31E00B89E70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		11FFA9A41D95D31E00B89E70 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		11FFA9A51D95D31E00B89E70 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		11FFA9A81D95D31E00B89E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		11FFA9AA1D95D31E00B89E70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11FFA9AD1D95D31E00B89E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		11FFA9AF1D95D31E00B89E70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11FFA9B41D95D31F00B89E70 /* FLSocketDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLSocketDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11FFA9B81D95D31F00B89E70 /* FLSocketDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLSocketDemoTests.m; sourceTree = "<group>"; };
+		11FFA9BA1D95D31F00B89E70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11FFA9BF1D95D31F00B89E70 /* FLSocketDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLSocketDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11FFA9C31D95D31F00B89E70 /* FLSocketDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLSocketDemoUITests.m; sourceTree = "<group>"; };
+		11FFA9C51D95D31F00B89E70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11FFA9D11D95D33600B89E70 /* FLSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLSocketManager.h; sourceTree = "<group>"; };
+		11FFA9D21D95D33600B89E70 /* FLSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLSocketManager.m; sourceTree = "<group>"; };
+		9468C124D8339895E8EF0043 /* libPods-FLSocketDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FLSocketDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E128A12766C3C87B3E42E661 /* Pods-FLSocketDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLSocketDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FLSocketDemo/Pods-FLSocketDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		FE7FAB067525FE383B5E3DC2 /* Pods-FLSocketDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLSocketDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FLSocketDemo/Pods-FLSocketDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11FFA9981D95D31E00B89E70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69BEC1970BB22257B7369E56 /* libPods-FLSocketDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11FFA9B11D95D31F00B89E70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11FFA9BC1D95D31F00B89E70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11FFA9921D95D31E00B89E70 = {
+			isa = PBXGroup;
+			children = (
+				11FFA99D1D95D31E00B89E70 /* FLSocketDemo */,
+				11FFA9B71D95D31F00B89E70 /* FLSocketDemoTests */,
+				11FFA9C21D95D31F00B89E70 /* FLSocketDemoUITests */,
+				11FFA99C1D95D31E00B89E70 /* Products */,
+				984B76222911BD85717967EC /* Pods */,
+				423C759AC575A009C7191042 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		11FFA99C1D95D31E00B89E70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11FFA99B1D95D31E00B89E70 /* FLSocketDemo.app */,
+				11FFA9B41D95D31F00B89E70 /* FLSocketDemoTests.xctest */,
+				11FFA9BF1D95D31F00B89E70 /* FLSocketDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11FFA99D1D95D31E00B89E70 /* FLSocketDemo */ = {
+			isa = PBXGroup;
+			children = (
+				11FFA9D11D95D33600B89E70 /* FLSocketManager.h */,
+				11FFA9D21D95D33600B89E70 /* FLSocketManager.m */,
+				11FFA9A11D95D31E00B89E70 /* AppDelegate.h */,
+				11FFA9A21D95D31E00B89E70 /* AppDelegate.m */,
+				11FFA9A41D95D31E00B89E70 /* ViewController.h */,
+				11FFA9A51D95D31E00B89E70 /* ViewController.m */,
+				11FFA9A71D95D31E00B89E70 /* Main.storyboard */,
+				11FFA9AA1D95D31E00B89E70 /* Assets.xcassets */,
+				11FFA9AC1D95D31E00B89E70 /* LaunchScreen.storyboard */,
+				11FFA9AF1D95D31E00B89E70 /* Info.plist */,
+				11FFA99E1D95D31E00B89E70 /* Supporting Files */,
+			);
+			path = FLSocketDemo;
+			sourceTree = "<group>";
+		};
+		11FFA99E1D95D31E00B89E70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				11FFA99F1D95D31E00B89E70 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11FFA9B71D95D31F00B89E70 /* FLSocketDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				11FFA9B81D95D31F00B89E70 /* FLSocketDemoTests.m */,
+				11FFA9BA1D95D31F00B89E70 /* Info.plist */,
+			);
+			path = FLSocketDemoTests;
+			sourceTree = "<group>";
+		};
+		11FFA9C21D95D31F00B89E70 /* FLSocketDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				11FFA9C31D95D31F00B89E70 /* FLSocketDemoUITests.m */,
+				11FFA9C51D95D31F00B89E70 /* Info.plist */,
+			);
+			path = FLSocketDemoUITests;
+			sourceTree = "<group>";
+		};
+		423C759AC575A009C7191042 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9468C124D8339895E8EF0043 /* libPods-FLSocketDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		984B76222911BD85717967EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E128A12766C3C87B3E42E661 /* Pods-FLSocketDemo.debug.xcconfig */,
+				FE7FAB067525FE383B5E3DC2 /* Pods-FLSocketDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11FFA99A1D95D31E00B89E70 /* FLSocketDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11FFA9C81D95D31F00B89E70 /* Build configuration list for PBXNativeTarget "FLSocketDemo" */;
+			buildPhases = (
+				C407D2D2C0C70006FA6959D6 /* [CP] Check Pods Manifest.lock */,
+				11FFA9971D95D31E00B89E70 /* Sources */,
+				11FFA9981D95D31E00B89E70 /* Frameworks */,
+				11FFA9991D95D31E00B89E70 /* Resources */,
+				88A57319F8463B8E57D089B0 /* [CP] Embed Pods Frameworks */,
+				F49AC1D937208ED4B9ADC847 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FLSocketDemo;
+			productName = FLSocketDemo;
+			productReference = 11FFA99B1D95D31E00B89E70 /* FLSocketDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		11FFA9B31D95D31F00B89E70 /* FLSocketDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11FFA9CB1D95D31F00B89E70 /* Build configuration list for PBXNativeTarget "FLSocketDemoTests" */;
+			buildPhases = (
+				11FFA9B01D95D31F00B89E70 /* Sources */,
+				11FFA9B11D95D31F00B89E70 /* Frameworks */,
+				11FFA9B21D95D31F00B89E70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11FFA9B61D95D31F00B89E70 /* PBXTargetDependency */,
+			);
+			name = FLSocketDemoTests;
+			productName = FLSocketDemoTests;
+			productReference = 11FFA9B41D95D31F00B89E70 /* FLSocketDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		11FFA9BE1D95D31F00B89E70 /* FLSocketDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11FFA9CE1D95D31F00B89E70 /* Build configuration list for PBXNativeTarget "FLSocketDemoUITests" */;
+			buildPhases = (
+				11FFA9BB1D95D31F00B89E70 /* Sources */,
+				11FFA9BC1D95D31F00B89E70 /* Frameworks */,
+				11FFA9BD1D95D31F00B89E70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11FFA9C11D95D31F00B89E70 /* PBXTargetDependency */,
+			);
+			name = FLSocketDemoUITests;
+			productName = FLSocketDemoUITests;
+			productReference = 11FFA9BF1D95D31F00B89E70 /* FLSocketDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11FFA9931D95D31E00B89E70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = clarence;
+				TargetAttributes = {
+					11FFA99A1D95D31E00B89E70 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					11FFA9B31D95D31F00B89E70 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 11FFA99A1D95D31E00B89E70;
+					};
+					11FFA9BE1D95D31F00B89E70 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 11FFA99A1D95D31E00B89E70;
+					};
+				};
+			};
+			buildConfigurationList = 11FFA9961D95D31E00B89E70 /* Build configuration list for PBXProject "FLSocketDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11FFA9921D95D31E00B89E70;
+			productRefGroup = 11FFA99C1D95D31E00B89E70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11FFA99A1D95D31E00B89E70 /* FLSocketDemo */,
+				11FFA9B31D95D31F00B89E70 /* FLSocketDemoTests */,
+				11FFA9BE1D95D31F00B89E70 /* FLSocketDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11FFA9991D95D31E00B89E70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11FFA9AE1D95D31E00B89E70 /* LaunchScreen.storyboard in Resources */,
+				11FFA9AB1D95D31E00B89E70 /* Assets.xcassets in Resources */,
+				11FFA9A91D95D31E00B89E70 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11FFA9B21D95D31F00B89E70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11FFA9BD1D95D31F00B89E70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88A57319F8463B8E57D089B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FLSocketDemo/Pods-FLSocketDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C407D2D2C0C70006FA6959D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F49AC1D937208ED4B9ADC847 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FLSocketDemo/Pods-FLSocketDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11FFA9971D95D31E00B89E70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11FFA9D31D95D33600B89E70 /* FLSocketManager.m in Sources */,
+				11FFA9A61D95D31E00B89E70 /* ViewController.m in Sources */,
+				11FFA9A31D95D31E00B89E70 /* AppDelegate.m in Sources */,
+				11FFA9A01D95D31E00B89E70 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11FFA9B01D95D31F00B89E70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11FFA9B91D95D31F00B89E70 /* FLSocketDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11FFA9BB1D95D31F00B89E70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11FFA9C41D95D31F00B89E70 /* FLSocketDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11FFA9B61D95D31F00B89E70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11FFA99A1D95D31E00B89E70 /* FLSocketDemo */;
+			targetProxy = 11FFA9B51D95D31F00B89E70 /* PBXContainerItemProxy */;
+		};
+		11FFA9C11D95D31F00B89E70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11FFA99A1D95D31E00B89E70 /* FLSocketDemo */;
+			targetProxy = 11FFA9C01D95D31F00B89E70 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		11FFA9A71D95D31E00B89E70 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11FFA9A81D95D31E00B89E70 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		11FFA9AC1D95D31E00B89E70 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11FFA9AD1D95D31E00B89E70 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11FFA9C61D95D31F00B89E70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		11FFA9C71D95D31F00B89E70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11FFA9C91D95D31F00B89E70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E128A12766C3C87B3E42E661 /* Pods-FLSocketDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FLSocketDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clarence.FLSocketDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		11FFA9CA1D95D31F00B89E70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE7FAB067525FE383B5E3DC2 /* Pods-FLSocketDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FLSocketDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clarence.FLSocketDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		11FFA9CC1D95D31F00B89E70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FLSocketDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clarence.FLSocketDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLSocketDemo.app/FLSocketDemo";
+			};
+			name = Debug;
+		};
+		11FFA9CD1D95D31F00B89E70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FLSocketDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clarence.FLSocketDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLSocketDemo.app/FLSocketDemo";
+			};
+			name = Release;
+		};
+		11FFA9CF1D95D31F00B89E70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FLSocketDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clarence.FLSocketDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FLSocketDemo;
+			};
+			name = Debug;
+		};
+		11FFA9D01D95D31F00B89E70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FLSocketDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clarence.FLSocketDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FLSocketDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11FFA9961D95D31E00B89E70 /* Build configuration list for PBXProject "FLSocketDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11FFA9C61D95D31F00B89E70 /* Debug */,
+				11FFA9C71D95D31F00B89E70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11FFA9C81D95D31F00B89E70 /* Build configuration list for PBXNativeTarget "FLSocketDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11FFA9C91D95D31F00B89E70 /* Debug */,
+				11FFA9CA1D95D31F00B89E70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11FFA9CB1D95D31F00B89E70 /* Build configuration list for PBXNativeTarget "FLSocketDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11FFA9CC1D95D31F00B89E70 /* Debug */,
+				11FFA9CD1D95D31F00B89E70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11FFA9CE1D95D31F00B89E70 /* Build configuration list for PBXNativeTarget "FLSocketDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11FFA9CF1D95D31F00B89E70 /* Debug */,
+				11FFA9D01D95D31F00B89E70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 11FFA9931D95D31E00B89E70 /* Project object */;
+}
