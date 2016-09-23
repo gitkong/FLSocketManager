@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    /**
+     *  @author 孔凡列, 16-09-21 08:09:06
+     *
+     *  开启连接
+     */
     NSString *url = @"服务器给你的地址";
     [[FLSocketManager shareManager] fl_open:url connect:^{
         NSLog(@"成功连接");
