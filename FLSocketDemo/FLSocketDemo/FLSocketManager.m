@@ -69,8 +69,17 @@
 }
 
 #pragma mark -- private method
-- (void)fl_open:(NSString *)urlStr{
-    self.urlString = urlStr;
+- (void)fl_open:(id)params{
+    NSLog(@"params = %@",params);
+    NSString *urlStr = nil;
+    if ([params isKindOfClass:[NSString class]]) {
+        urlStr = (NSString *)params;
+    }
+    else if([params isKindOfClass:[NSTimer class]]){
+        NSTimer *timer = (NSTimer *)params;
+        urlStr = [timer userInfo];
+    }
+    [FLSocketManager shareManager].urlString = urlStr;
     [self.webSocket close];
     self.webSocket.delegate = nil;
     
