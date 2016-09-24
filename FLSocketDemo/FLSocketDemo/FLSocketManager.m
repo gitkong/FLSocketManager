@@ -97,23 +97,18 @@
 }
 
 - (void)fl_reconnect{
-    if(self.fl_socketStatus == FLSocketStatusFailed || self.fl_socketStatus == FLSocketStatusClosedByServer){
-        [self.timer invalidate];
-        self.timer = nil;
-        NSLog(@"正在重连");
-        //重连
-        [self fl_open:self.urlString];
+    // 开启定时器
+    if (self.timer == nil) {
+        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:self.overtime target:self selector:@selector(fl_open:) userInfo:self.urlString repeats:NO];
+        [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+        self.timer = timer;
     }
 }
 
 #pragma mark -- SRWebSocketDelegate
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket{
     NSLog(@"Websocket Connected");
-    // 开启定时器
-    if (self.timer == nil) {
-        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:self.overtime target:self selector:@selector(fl_reconnect) userInfo:nil repeats:YES];
-        self.timer = timer;
-    }
+    
     [FLSocketManager shareManager].connect ? [FLSocketManager shareManager].connect() : nil;
     [FLSocketManager shareManager].fl_socketStatus = FLSocketStatusConnected;
 }
@@ -136,6 +131,8 @@
     NSLog(@"Closed Reason:%@  code = %zd",reason,code);
     if (reason) {
         [FLSocketManager shareManager].fl_socketStatus = FLSocketStatusClosedByServer;
+        // 重连
+        [self fl_reconnect];
     }
     else{
         [FLSocketManager shareManager].fl_socketStatus = FLSocketStatusClosedByUser;
