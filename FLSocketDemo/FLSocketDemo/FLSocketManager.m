@@ -15,14 +15,6 @@
 
 @property (nonatomic,assign)FLSocketStatus fl_socketStatus;
 
-@property (nonatomic,copy)FLSocketDidConnectBlock connect;
-
-@property (nonatomic,copy)FLSocketDidReceiveBlock receive;
-
-@property (nonatomic,copy)FLSocketDidFailBlock failure;
-
-@property (nonatomic,copy)FLSocketDidCloseBlock close;
-
 @property (nonatomic,weak)NSTimer *timer;
 
 @property (nonatomic,copy)NSString *urlString;

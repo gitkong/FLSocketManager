@@ -58,6 +58,30 @@ typedef void(^FLSocketDidReceiveBlock)(id message ,FLSocketReceiveType type);
 
 @interface FLSocketManager : NSObject
 /**
+ *  @author 孔凡列, 16-09-21 08:09:06
+ *
+ *  连接回调
+ */
+@property (nonatomic,copy)FLSocketDidConnectBlock connect;
+/**
+ *  @author 孔凡列, 16-09-21 08:09:06
+ *
+ *  接收消息回调
+ */
+@property (nonatomic,copy)FLSocketDidReceiveBlock receive;
+/**
+ *  @author 孔凡列, 16-09-21 08:09:06
+ *
+ *  失败回调
+ */
+@property (nonatomic,copy)FLSocketDidFailBlock failure;
+/**
+ *  @author 孔凡列, 16-09-21 08:09:06
+ *
+ *  关闭回调
+ */
+@property (nonatomic,copy)FLSocketDidCloseBlock close;
+/**
  *  @author 孔凡列, 16-09-21 08:09:28
  *
  *  当前的socket状态
