@@ -21,7 +21,9 @@
 
 @end
 
-@implementation FLSocketManager
+@implementation FLSocketManager{
+    NSInteger _reconnectCounter;
+}
 
 
 + (instancetype)shareManager{
@@ -30,6 +32,7 @@
     dispatch_once(&onceToken, ^{
         instance = [[self alloc] init];
         instance.overtime = 1;
+        instance.reconnectCount = 5;
     });
     return instance;
 }
@@ -70,7 +73,7 @@
 
 #pragma mark -- private method
 - (void)fl_open:(id)params{
-    NSLog(@"params = %@",params);
+//    NSLog(@"params = %@",params);
     NSString *urlStr = nil;
     if ([params isKindOfClass:[NSString class]]) {
         urlStr = (NSString *)params;
@@ -98,12 +101,23 @@
 }
 
 - (void)fl_reconnect{
-    // 开启定时器
-    if (self.timer == nil) {
+    // 计数+1
+    if (_reconnectCounter < self.reconnectCount - 1) {
+        _reconnectCounter ++;
+        // 开启定时器
         NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:self.overtime target:self selector:@selector(fl_open:) userInfo:self.urlString repeats:NO];
         [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
         self.timer = timer;
     }
+    else{
+        NSLog(@"Websocket Reconnected Outnumber ReconnectCount");
+        if (self.timer) {
+            [self.timer invalidate];
+            self.timer = nil;
+        }
+        return;
+    }
+    
 }
 
 #pragma mark -- SRWebSocketDelegate
@@ -112,6 +126,8 @@
     
     [FLSocketManager shareManager].connect ? [FLSocketManager shareManager].connect() : nil;
     [FLSocketManager shareManager].fl_socketStatus = FLSocketStatusConnected;
+    // 开启成功后重置重连计数器
+    _reconnectCounter = 0;
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error{
